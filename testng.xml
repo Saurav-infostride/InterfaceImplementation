@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/SauravSharma/IdeaProjects/Interfaces_SourceDemo">
+        <classes>
+            <class name="Test.LoginTest">
+                <methods>
+                    <include name="loginDetails"/>
+                </methods>
+            </class>
+            <class name="Test.LogoutTest">
+                <methods>
+                    <include name="logout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
