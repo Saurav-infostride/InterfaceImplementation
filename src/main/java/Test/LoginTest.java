@@ -8,6 +8,7 @@ public class LoginTest extends TestBase {
 
     @Test
     public void loginDetails() throws IOException {
-        pageFactory.getLoginPage().login();
+        pageFactory.getLoginPage().loginIntoApplication();
+        pageFactory.getLoginPage().verifySuccessfulLogin();
     }
 }

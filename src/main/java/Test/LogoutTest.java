@@ -8,7 +8,7 @@ public class LogoutTest extends TestBase {
 
     @Test
     public void logout() throws IOException {
-        pageFactory.getLoginPage().login();
+        pageFactory.getLoginPage().loginIntoApplication();
         pageFactory.getLogoutPage().logout();
     }
 }

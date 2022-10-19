@@ -1,29 +1,29 @@
 package Pages;
 
+import Interfaces.ILoginPage;
+import Interfaces.ILogoutPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-
 import static Test.TestBase.driver;
 
 
-public class PageDemo {
+public class PageFactory {
 
     private LoginPage loginPage;
     private LogoutPage logoutPage;
 
-    public PageDemo(WebDriver driver)
+    public PageFactory(WebDriver driver)
     {
-        PageFactory.initElements(driver, this);
+        org.openqa.selenium.support.PageFactory.initElements(driver, this);
     }
 
-    public LoginPage getLoginPage() {
+    public ILoginPage getLoginPage() {
         if (loginPage == null) {
             loginPage = new LoginPage(driver);
         }
         return loginPage;
     }
 
-    public LogoutPage getLogoutPage() {
+    public ILogoutPage getLogoutPage() {
         if (logoutPage == null) {
             logoutPage = new LogoutPage(driver);
         }

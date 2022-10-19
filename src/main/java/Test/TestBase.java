@@ -1,6 +1,6 @@
 package Test;
 
-import Pages.PageDemo;
+import Pages.PageFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +14,7 @@ import java.util.Properties;
 public class TestBase {
     public static Properties prop;
     public static WebDriver driver;
-    protected PageDemo pageFactory;
+    protected PageFactory pageFactory;
 
     public TestBase()  {
         try {
@@ -29,7 +29,7 @@ public class TestBase {
     public void initialization() {
         WebDriverManager.chromedriver().setup();
         driver=new ChromeDriver();
-        pageFactory = new PageDemo(driver);
+        pageFactory = new PageFactory(driver);
         implicitWait();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
